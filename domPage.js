@@ -8,6 +8,7 @@ app = {
             _that.init("#idContentBg",".section","#content");
             _that.pageInit(json.respond);
 
+
         });
         _that.mouse.mousewheel();
         _that.fn(json.fn);
