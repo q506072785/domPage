@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>阿里卖家 demo</title>
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/jqueryui/1.8.22/jquery-ui.min.js "></script>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/css.css" rel="stylesheet" />
+    <!--[if IE 6]> <link href="css/cssie.css" rel="stylesheet" /> <![endif]-->
+    <!--[if IE 7]> <link href="css/cssie.css" rel="stylesheet" /> <![endif]-->
+    <!--[if IE 8]> <link href="css/cssie.css" rel="stylesheet" /> <![endif]-->
+    <!--[if IE 9]> <link href="css/cssie.css" rel="stylesheet" /> <![endif]-->
+</head>
+<style>
+    body,div{ margin:0; padding:0; }
+    #fullPage-nav { position:absolute; top:0; left:0; z-index:3; }
+    #idContentBg{ overflow:hidden; position:relative;}
+    #content { position:absolute; top:0; left:0; width:100%;}
+</style>
+<body style="overflow: hidden; height: 100%; ">
+
+<div id="idContentBg">
+    <div id="content">
+                <div class="section section1">
+            <div class="section1-bg">
+                <img src="img/section12.png" width="100%" />
+                <div class="section1-log top-div"></div>
+                <div class="section1-yp top-div"></div>
+                <div class="section1-wx top-div"></div>
+                <div class="section1-sf top-div"></div>
+                <div class="section1-ydt top-div"></div>
+                <div class="section1-ztc top-div"></div>
+                <div class="section1-tra top-div"></div>
+                <div class="section1-zd top-div"></div>
+                <a class="btn a1 top-div" href="#"></a>
+                <a class="btn a2 top-div" href="#"></a>
+                <div class="section1-logn-bg top-div"></div>
+                <div class="section1-logn top-div">
+                    <h2>登录阿里卖家</h2>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="手机号/淘宝会员名" />
+                        </li>
+                        <li>
+                            <input class="input2" type="password" placeholder="请输入密码" />
+                        </li>
+                        <li class="m-t20">
+                            <button>登 录</button>
+                        </li>
+                        <li><a class="fl ft-cb">忘记密码</a><a class="fr ft-cg">免费注册</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section1-text">
+                <h2>阿里卖家  您的贴身工作平台</h2>
+                <p>阿里卖家手机版是阿里巴巴为外贸人倾力打造的移动工作平台卖家可以通过手机处理询盘Trade Manager、查看RFQ、收发邮件等功能满足外贸人移动办公的需求。</p>
+            </div>
+            <div class="section1-f">
+                <a href="#page2">1</a>
+            </div>
+        </div>
+        <div class="section section2">
+            <div class="section2-mail"></div>
+            <div class="section2-yt"></div>
+            <div class="section2-smali"></div>
+            <div class="section2-mouse"></div>
+            <div class="section2-text"></div>
+            <a href="#" class="section2-a"></a>
+        </div>
+        <div class="section section3">
+            <div class="section3-phone"></div>
+            <div class="section3-msg"></div>
+            <div class="section3-text"></div>
+        </div>
+        <div class="section section4">
+            <div class="main">
+                <div class='section4-phone'>
+                </div>
+                <div class='section4-p1'>
+                </div>
+                <div class='section4-p2'>
+                </div>
+                <div class='section4-p3'>
+                </div>
+
+                <div class="section4-text"></div>
+            </div>
+        </div>
+        <div class="section section5">
+            <div class="section5-plane"></div>
+            <div class="section5-cloud1"></div>
+            <div class="section5-cloud2"></div>
+            <div class="section5-air"></div>
+            <div class="section5-text">
+                <p>
+                    <strong>采购直达</strong>
+                </p>
+                <p>业务扩展快人一步，RFQ自动匹配并提醒，RFQ查看和报价。</p>
+            </div>
+        </div>
+        <div class="section section6">
+            <div class="section6-earthbg"></div>
+            <div class="section6-earth1"></div>
+            <div class="section6-yy"></div>
+            <div class="section6-text"></div>
+        </div>
+        <div class="section section7">
+            <div class="section7-phone"></div>
+            <div class="section7-fire"></div>
+            <div class="section7-fire2"></div>
+            <div class="section7-cloud2"></div>
+            <div class="section7-cloud1"></div>
+            <div class="section7-text"></div>
+            <div class="section7-footer">
+                <p>产品上市策略-知识产权政策与商标声明-隐私权政策-使用条款-人身财产安全中心-举报侵权知识产权</p>
+                <p>版权声明@1990-2014阿里巴巴(香港)有限公司经营许可证。保留所有产权</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/domPage.js"></script>
+<script type="text/javascript">
+    $.extend({
+        demoH5:app
+    });
+    $.demoH5.main({
+        respond:true,//动画自适应
+        nav:{
+            anchor:true, //点击是否做翻页带#page 都跳页
+            attribute:["登录|#page1","免费注册|#page2","帮助中心|#page3"],
+        },
+        fn: function () {
+            var app = {
+                bodySzie: function () {
+                    if ($(window).height() < 780) {
+                        $(".section1-bg").height(410);
+                        $(".top-div").css("top", "18%");
+                    } else {
+                        $(".section1-bg").height("auto");
+                        $(".top-div").css("top", "20%");
+                    }
+                }
+            }
+            app.bodySzie();
+            $(window).resize(function (){
+               app.bodySzie();
+            })
+        }
+        
+    });
+</script>
+
+</html>
